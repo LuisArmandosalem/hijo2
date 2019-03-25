@@ -1,0 +1,56 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="hijo2-elemento">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+    <table border="3" id="tabla">
+      <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+        <td>Celda 3</td>
+      </tr>
+      <tr>
+        <td>Celda 4</td>
+        <td>Celda 5</td>
+        <td>Celda 6</td>
+      </tr>
+    </table>
+    <ul id="lista">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>  
+      
+  </template>
+
+  <script>
+    /**
+     * `hijo2-elemento`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class Hijo2Elemento extends Polymer.Element {
+      static get is() {
+        return 'hijo2-elemento';
+      }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'hijo2-elemento'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(Hijo2Elemento.is, Hijo2Elemento);
+  </script>
+</dom-module>
